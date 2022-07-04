@@ -25,7 +25,7 @@ import {
   Link as RouterLink,
   LinkProps as RouterLinkProps,
 } from 'react-router-dom';
-import { getBasePath } from '@backstage/core-app-api';
+import { Config } from '@backstage/config';
 
 const useStyles = makeStyles(
   {
@@ -46,6 +46,20 @@ const useStyles = makeStyles(
 );
 
 export const isExternalUri = (uri: string) => /^([a-z+.-]+):/.test(uri);
+
+/**
+ * Get the app base path from the configured app baseUrl.
+ *
+ * The returned path does not have a trailing slash.
+ */
+const getBasePath = (configApi: Config) => {
+  let { pathname } = new URL(
+    configApi.getOptionalString('app.baseUrl') ?? '/',
+    'http://dummy.dev', // baseUrl can be specified as just a path
+  );
+  pathname = pathname.replace(/\/*$/, '');
+  return pathname;
+};
 
 export type LinkProps = MaterialLinkProps &
   RouterLinkProps & {
