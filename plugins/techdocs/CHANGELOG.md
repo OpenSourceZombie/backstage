@@ -1,5 +1,19 @@
 # @backstage/plugin-techdocs
 
+## 1.2.1-next.2
+
+### Patch Changes
+
+- 7739141ab2: Fix: When docs are shown in an entity page under the docs tab the sidebars start overlapping with the header and tabs in the page when you scroll the documentation content.
+- Updated dependencies
+  - @backstage/core-components@0.10.0-next.2
+  - @backstage/catalog-model@1.1.0-next.2
+  - @backstage/plugin-search-react@0.2.2-next.2
+  - @backstage/theme@0.2.16-next.1
+  - @backstage/plugin-catalog-react@1.1.2-next.2
+  - @backstage/integration-react@1.1.2-next.2
+  - @backstage/plugin-techdocs-react@1.0.2-next.1
+
 ## 1.2.1-next.1
 
 ### Patch Changes

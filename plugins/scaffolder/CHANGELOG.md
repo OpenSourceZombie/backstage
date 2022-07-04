@@ -1,5 +1,21 @@
 # @backstage/plugin-scaffolder
 
+## 1.4.0-next.2
+
+### Minor Changes
+
+- d8eb82f447: Add `allowedRepos` `ui:option` to `RepoUrlPicker` component, and move `repoName` field to own component
+
+### Patch Changes
+
+- 14146703e5: Add `allowArbitraryValues` to `ui:options` in `OwnedEntityPicker`, similar to `allowArbitraryValues` in `EntityPicker`
+- Updated dependencies
+  - @backstage/core-components@0.10.0-next.2
+  - @backstage/catalog-model@1.1.0-next.2
+  - @backstage/theme@0.2.16-next.1
+  - @backstage/plugin-catalog-react@1.1.2-next.2
+  - @backstage/integration-react@1.1.2-next.2
+
 ## 1.4.0-next.1
 
 ### Patch Changes
